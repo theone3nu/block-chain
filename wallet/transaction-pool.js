@@ -5,7 +5,7 @@ class TransactionPool {
 
 	updateOrAddTransaction(transaction) {
 		const transactionIndex = this.transactions.findIndex(t => t.id === transaction.id);
-		if(transactionIndex >= 0) {
+		if(transactionIndex != -1) {
 			this.transactions[transactionIndex] = transaction;
 		} else {
 			this.transactions.push(transaction);
